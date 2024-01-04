@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario: expresiones regulares</title>
+    <link rel="stylesheet" href="style.css">Ç
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <form action="">
+            <label for="name">Nombre: </label>
+            <input type="text" name="name" id="name" placeholder="Tu nombre" pattern="[A-Za-záéíóúÁÉÍÓÚñÑ\s]+"
+                required />
+            <label for="surname">Apellidos: </label>
+            <input type="text" name="surname" id="surname" placeholder="Tus apellidos"
+                pattern="[A-Za-záéíóúÁÉÍÓÚñÑ]+(\s[A-Za-záéíóúÁÉÍÓÚñÑ]+)+" required />
+            <div class="dniTelefono">
+                <div class="dni">
+                    <label for="dni">DNI: </label>
+                    <input type="text" name="dni" id="dni" placeholder="12345678A" pattern="[0-9]{8}-?[a-zA-Z]"
+                        required />
+                </div>
+                <div class="tel">
+                    <label for="phone">Tel: </label>
+                    <input type="text" name="phone" id="phone" placeholder="612345678" pattern="(\+34)?[6][0-9]{8}"
+                        required />
+                </div>
+            </div>
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email" placeholder="direccion@correo.com"
+                pattern="[\w._%+-]+@[\w.-]+\.[a-zA-Z]{2,4}" required />
+            <label for="adress">Dirección: </label>
+            <input type="text" name="adress" id="adress" placeholder="Calle, número, piso, letra."
+                pattern="[\wáéíóúÁÉÍÓÚñÑ\s-º°.,/]+" required />
+            <button>ENVIAR</button>
+        </form>
+    </main>
+</body>
+
+</html>
